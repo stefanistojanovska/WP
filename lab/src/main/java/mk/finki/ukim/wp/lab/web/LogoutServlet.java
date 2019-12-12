@@ -12,10 +12,10 @@ public class LogoutServlet extends HttpServlet {
     /*
      * We use the service method since it is invoked for all HTTP methods
      */
-    @Override
+ /*   @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         System.out.println("[WP-Log] {service/logout}");
         req.getSession().invalidate();
         resp.sendRedirect("/");
-    }
+    }*/
 }

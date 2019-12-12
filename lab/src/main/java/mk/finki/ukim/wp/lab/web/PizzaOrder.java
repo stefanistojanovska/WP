@@ -24,13 +24,13 @@ public class PizzaOrder extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        System.out.println("[WP-Log] {doPost/PizzaOrder}");
+        /*System.out.println("[WP-Log] {doPost/PizzaOrder}");
         doGet(req,resp);
-
+*/
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("[WP-Log] {doGet/PizzaOrder");
+       /* System.out.println("[WP-Log] {doGet/PizzaOrder");
         if(req.getParameter("pizza_size")==null)
             resp.sendRedirect("/");
         WebContext webContext = new WebContext(req, resp, req.getServletContext());
@@ -40,7 +40,7 @@ public class PizzaOrder extends HttpServlet {
         order.setPizzaSize(req.getParameter("pizza_size"));
         session.setAttribute("order",order);
         resp.setContentType("text/html; charset=UTF-8");
-        this.springTemplateEngine.process("deliveryInfo.html", webContext, resp.getWriter());
+        this.springTemplateEngine.process("deliveryInfo.html", webContext, resp.getWriter());*/
 
     }
 

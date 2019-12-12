@@ -21,14 +21,14 @@ public class ConfirmationInfo extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("[WP-Log] {doPost/Confirmation}");
-        doGet(req,resp);
+      /*  System.out.println("[WP-Log] {doPost/Confirmation}");
+        doGet(req,resp);*/
     }
 
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("[WP-Log] {doGet/Confirmation}");
+      /*  System.out.println("[WP-Log] {doGet/Confirmation}");
         if(req.getParameter("clientName")==null||req.getParameter("clientAddress")==null)
             resp.sendRedirect("/");
         Order order=(Order)req.getSession().getAttribute("order");
@@ -43,6 +43,6 @@ public class ConfirmationInfo extends HttpServlet {
         webContext.setVariable("ip",ip);
         webContext.setVariable("browser",browser);
         resp.setContentType("text/html; charset=UTF-8");
-        this.springTemplateEngine.process("confirmationInfo.html", webContext, resp.getWriter());
+        this.springTemplateEngine.process("confirmationInfo.html", webContext, resp.getWriter());*/
     }
 }

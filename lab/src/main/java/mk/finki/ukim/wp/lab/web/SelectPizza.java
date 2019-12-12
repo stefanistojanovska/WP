@@ -26,21 +26,21 @@ public class SelectPizza extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("[WP-Log] {doPost/SeletPizza}");
-        doGet(req,resp);
+        /*System.out.println("[WP-Log] {doPost/SeletPizza}");
+        doGet(req,resp);*/
     }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("[WP-Log] {doGet/SelectPizza}");
-        WebContext webContext = new WebContext(req, resp, req.getServletContext());
+      /*  System.out.println("[WP-Log] {doGet/SelectPizza}");
+        WebContext *//*webContext = new WebContext(req, resp, req.getServletContext());
         if(req.getParameter("pizza")==null)
             resp.sendRedirect("/");
-        Order order=new Order(req.getParameter("pizza"),"","","");
+       // Order order=new Order(req.getParameter("pizza"),"","","");
         HttpSession session=req.getSession();
-        session.setAttribute("order", order);
+       // session.setAttribute("order", order);
         resp.setContentType("text/html; charset=UTF-8");
-        this.springTemplateEngine.process("selectPizzaSize.html", webContext, resp.getWriter());
-
+        this.springTemplateEngine.process("selectPizzaSize.html", webContext, resp.getWriter());*//*
+*/
     }
 
 }

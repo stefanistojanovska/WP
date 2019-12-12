@@ -7,9 +7,9 @@ import org.springframework.web.context.support.RequestHandledEvent;
 public class MyEventListener {
     @EventListener(RequestHandledEvent.class)
     public void handleEvent (RequestHandledEvent e) {
-        System.out.println("[WP-Log] {EventListener}");
+      /*  System.out.println("[WP-Log] {EventListener}");
         System.out.println("-- RequestHandledEvent --");
-        System.out.println(e);
+        System.out.println(e);*/
     }
 }
 /*

@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface PizzaService {
     List<Pizza> listPizzas();
+    List<Pizza> getByIngredients(Long id);
+    void delete(Long id);
+    List<Pizza> findAll();
+    Pizza findById(Long id);
 }

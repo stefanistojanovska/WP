@@ -24,12 +24,12 @@ public class ShowPizza extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("[WP-Log] {doGet/ShowPizza}");
+       /* System.out.println("[WP-Log] {doGet/ShowPizza}");
         WebContext webContext = new WebContext(req, resp, req.getServletContext());
         List<Pizza> pizzas = pizzaService.listPizzas();
         webContext.setVariable("pizzas", pizzas);
         resp.setContentType("text/html; charset=UTF-8");
-        this.springTemplateEngine.process("listPizzas.html", webContext, resp.getWriter());
+        this.springTemplateEngine.process("listPizzas.html", webContext, resp.getWriter());*/
 
 
     }
