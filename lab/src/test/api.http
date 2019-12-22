@@ -1,3 +1,3 @@
-GET localhost:9090/ingredients/3/pizzas
+POST localhost:9090/ingredients?id=4&name=mayo&spicy=false&amount=3.3&veggie=true
 
 ###

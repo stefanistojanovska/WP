@@ -43,6 +43,30 @@ public class Ingredient implements Comparable<Ingredient> {
         return veggie;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSpicy(boolean spicy) {
+        this.spicy = spicy;
+    }
+
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
+    public void setVeggie(boolean veggie) {
+        this.veggie = veggie;
+    }
+
     @Override
     public int compareTo(Ingredient o) {
         return this.name.compareTo(o.name);

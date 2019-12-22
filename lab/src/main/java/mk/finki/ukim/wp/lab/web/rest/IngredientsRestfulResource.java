@@ -27,17 +27,26 @@ public class IngredientsRestfulResource {
 
     @PostMapping("/ingredients")
     @ResponseStatus(HttpStatus.CREATED)
-    public Ingredient createIngredient(@RequestBody Ingredient ingredient) {
-
-        /*boolean veggie=boolVeggie.equals("true");
+   // public Ingredient createIngredient(@RequestBody Ingredient ingredient) {
+    public Ingredient createIngredient(@RequestParam("id") Long Id, @RequestParam("name") String name,
+                                       @RequestParam("spicy") String boolSpicy,
+                                       @RequestParam("amount") Float amount,
+                                       @RequestParam("veggie") String boolVeggie) {
+        boolean veggie=boolVeggie.equals("true");
         boolean spicy= boolSpicy.equals("true");
 
 
-        Ingredient result = ingredientService.createIngredient(id,name,spicy,amount,veggie);
-        response.setHeader("Location", builder.path("/ingredients/{id}").buildAndExpand(result.getSlotId()).toUriString());*/
+        //Ingredient result = ingredientService.createIngredient(id,name,spicy,amount,veggie);
+        //response.setHeader("Location", builder.path("/ingredients/{id}").buildAndExpand(result.getSlotId()).toUriString());*/
         Ingredient in=null;
+        in.setId(Id);
+        in.setAmount(amount);
+        in.setName(name);
+        in.setSpicy(spicy);
+        in.setVeggie(veggie);
+
         try {
-            in= ingredientService.createIngredient(ingredient);
+            ingredientService.createIngredient(in);
         } catch (MoreThanThreeSpicyIngredients | DuplicateNameException moreThanThreeSpicyIngredients) {
             moreThanThreeSpicyIngredients.printStackTrace();
         }
@@ -77,16 +86,13 @@ public class IngredientsRestfulResource {
         return ingredientService.getSpicy();
     }
 
-    @GetMapping("/ingredients/{id}/pizzas")
-    public List<Pizza> pizzasByIngredient()
-    {
-        return null;
-    }
+
     @DeleteMapping("/ingredients/{id}")
     public void delete(@PathVariable Long id) {
         ingredientService.deleteById(id);
     }
-    @GetMapping("/ingredients/{id}/pizza")
+
+    @GetMapping("/ingredients/{id}/pizzas")
     public List<Pizza> getByIngredient(@PathVariable("id") Long id )
     {
         return pizzaService.getByIngredients(id);

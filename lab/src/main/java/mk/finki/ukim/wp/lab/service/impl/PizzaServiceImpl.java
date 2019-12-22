@@ -20,7 +20,7 @@ public class PizzaServiceImpl implements PizzaService {
 
     @Override
     public List<Pizza> listPizzas() {
-        return null;
+        return pizzaRepository.findAll();
     }
 
     @Override

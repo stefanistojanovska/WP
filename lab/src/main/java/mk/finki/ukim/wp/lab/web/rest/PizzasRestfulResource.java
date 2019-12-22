@@ -27,9 +27,9 @@ public class PizzasRestfulResource {
     {
         return pizzaService.findById(id);
     }
-    @GetMapping("/pizzas")
+  /*  @GetMapping("/pizzas")
     public List<Pizza> getByIngredientsCount(@RequestParam("totalIngredients")int total)
-    {
-        return null;
-    }
+    {a
+        return pizzaSe
+    }*/
 }
