@@ -34,7 +34,7 @@ public class IngredientServiceImpl implements IngredientService {
 
     @Override
     public Ingredient updateIngredient(Long id,String name, boolean spicy, float amount, boolean veggie) {
-        Ingredient ingredient=new Ingredient(id,name,spicy,amount,veggie);
+        Ingredient ingredient=new Ingredient(name,spicy,amount,veggie);
         return rep.save(ingredient);
 
     }

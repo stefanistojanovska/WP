@@ -19,7 +19,7 @@ public class Ingredient implements Comparable<Ingredient> {
     private float amount;
     private boolean veggie;
 
-    public Ingredient(Long id,String name,boolean spicy,float amount,boolean veggie) {
+    public Ingredient(String name,boolean spicy,float amount,boolean veggie) {
         this.id=id;
         this.name=name;
         this.spicy=spicy;
